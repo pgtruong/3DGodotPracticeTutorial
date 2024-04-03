@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://7fjwdlvabxv0"]
+
+[ext_resource type="Script" path="res://cube_man.gd" id="1_g354l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t186r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0m335"]
+
+[node name="CubeMan" type="CharacterBody3D"]
+script = ExtResource("1_g354l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_t186r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0m335")
